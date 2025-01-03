@@ -1,0 +1,1 @@
+from cqrs.commands import Command

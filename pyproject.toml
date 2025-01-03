@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "users-service"
+version = "0.1.0"
+description = ""
+authors = ["mr-mapache <eric.m.cardozo@mi.unc.edu.ar>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+fastapi = "^0.115.6"
+pydantic = {extras = ["email"], version = "^2.10.4"}
+sqlalchemy = {extras = ["asyncio"], version = "^2.0.36"}
+pydantic-settings = "^2.7.1"
+asyncpg = "^0.30.0"
+pytest-asyncio = "^0.25.1"
+redis = {extras = ["hiredis"], version = "^5.2.1"}
+
+
+[tool.poetry.group.tests.dependencies]
+pytest = {extras = ["asyncio"], version = "^8.3.4"}
+httpx = "^0.28.1"
+
+
+[tool.poetry.group.cqrs.dependencies]
+fast-depends = "^2.4.12"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
